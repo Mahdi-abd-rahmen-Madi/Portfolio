@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mahdi Madi"/>
+    <meta name="keywords" content="Personal_Portfolio,FreeCodecamp_tutorial,Mahdi_Madi, ">
+    <meta name="description" content="freeCodeCamp Personal Portfolio Responsive Web Design project" />    
+    <title class="title"> Mahdi's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/97a93053e0.js" crossorigin="anonymous"></script>
+  </head>
+  <!--
+  <frameworks rows="*,*,*">
+    <frame src="page1.html" name="project-1"></frame>
+    <frame src="page2.html" name="project-2"></frame>
+    <frame src="page3.html" name="project-3"></frame>
+  </frameworks>
+  -->
+  <body>
+    <div class="scroll-tracker"></div>
+    <main>
+      <header class="section" id="header">
+       <div class="container">
+        <nav id="navbar">
+          <img src="" class="logo" alt="Logo Image">
+          <ul  id="sidemenu">
+            <li><a href="#header"class="nav-link active">Home</a></li>
+            <li><a href="#about"class="nav-link">About</a></li>
+            <li><a href="#services"class="nav-link">Services</a></li>
+            <li><a href="#portfolio"class="nav-link">Portfolio</a></li>
+            <li><a href="#contact"class="nav-link">Contact</a></li>
+            <!--
+            <li><a href="#resume"class="nav-link">Resume</a></li>
+            <li><a href="#blog"class="nav-link">Blog</a></li>
+            -->
+
+            
+            <li>
+              <div class="button-box" id="toggleD">
+                <div class="sun" id="sun">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+                  <div class="line3"></div>
+                  <div class="line4"></div>
+                </div> 
+              </div>
+            </li>
+            
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+        </nav>
+        <div class="header-text">
+          <h1 class="title">GIS Analyst | Self taught Web Developer</h1>
+        </div>
+      </header>
+      <!--------------------- About ---------------------->  
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="img/portfolio.jpg" alt="Profile Image">
+            </div>
+            <div class="about-col-2">
+              <h1 class="subtitle">About Me</h1>
+              <p>
+                GIS analyst and self-taught web developer.
+                 I love to code,
+                 but I also enjoy Cartography and Data Science.
+              </p>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+                <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li><span>Web development</span><br>Web development refers to building, creating, and maintaining websites</li>
+                  <li><span>Web Mapping</span><br>Web mapping is the process of using the internet to view, analyze, <br>or share a visual representation of geospatial data in map form.</li>
+                  <li><span>Cartography</span><br>Cartography is the study and practice of making and using maps.</li>
+                  <li><span>Video Editing</span><br>Video editing is the manipulation and arrangement of video shots.</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <!--<li><span>Experience</span><br>short description</li>-->
+                  <li>
+                    <span>Field Surveryor In Partnership with Friedrich Association</span>
+                    <br>
+                    <small>Oct 2022 - Nov 2022</small>
+                  </li>
+                  <li>
+                    <span>Marketer at Intelligence Research Office and Opinions Polls</span>
+                    <br>
+                    <small>2021-present</small>
+                    <br>
+                    I assisted in conducting market search for various known Tunisian companies throughout surveys with a team of 5-10 person throughout the country,
+                    My current role consist of assuring quality control of various well-knows chain stores services providers in Tunisia as well.
+                    <br>
+                    <br>
+                    <span style="padding-bottom:50px">Skills</span>
+                    <br> Marketing · Market Research · Communication 
+                    
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li>
+                    <span>Master's degree in GIS and Cartography</span> 
+                    <br>
+                    <small> Sep 2021 - Jun 2023 [FST Manar-Tunis]</small> 
+                    <br>
+                    
+                  </li>
+                  <li>
+                    <span>Licentiate degree in Earth Science </span>
+                    <br>
+                    <small> Sep 2018 - Jun 2021 [FST Manar-Tunis]</small>
+                    <br>
+                   
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="certifications">
+                <ul>
+                  <li>
+                    <span><small>Responsive Web Design by FreeCodeCamp</small></span>
+                    <br>
+                    <a href="https://www.freecodecamp.org/certification/Mahdi-Madi/responsive-web-design">Learn More</a>
+                  </li>
+                  <li>
+                    <span><small>EF SET Certificate</small></span>
+                    <br>
+                    <a href="https://efset.org/cert/FkqUeG">Learn More</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </section>
+      <!---------------------- Services ------------------------->
+      <section id="services" >
+        <div class="container">
+          <h1 class="subtitle">My Services</h1>
+          <div class="services-list">
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>Web Development</h2>
+              <!--<p></p>-->
+              <a href="#contact">Learn More</a>
+            </div>
+            <div>
+              <i class="fa-sharp fa-solid fa-layer-group"></i>
+              <h2>Web Mapping</h2>
+              <!--<p>Description</p>-->
+              <a href="#contact">Learn More</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-map-location"></i>
+              <h2>Cartography</h2>
+              <!--<p>description</p>-->
+              <a href="#contact">Learn More</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-crop-simple"></i>
+              <h2>Video Editing</h2>
+              <!--<p>description</p>-->
+              <a href="#contact">Learn More</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!--------------------------------------------------- Portfolio ------------------------------------------------------------>
+      <section id="portfolio">
+        <div class="container">
+          <h1 class="subtitle">Portfolio</h1>
+          <div class="work-list">
+            <div class="work">
+                  <iframe 
+                    frameborder="0" allowfullscreen mozallowfullscreen="true" 
+                    allow="autoplay;xr-spatial-tracking " 
+                    xr-spatial-tracking execution-while-out-of-viewport 
+                    execution-while-not-rendered web-share 
+                    height="300"
+                    src="https://sketchfab.com/models/5a8a7d0f23764d9482336a372e366561/embed?autospin=1&autostart=1&ui_theme=dark&dnt=1"> 
+                  </iframe>   
+                  <div class="layer">
+                    <h3>Geological 3D Model</h3>
+                    <p>Slope map of the Rolling Hills area</p>
+                    <a href="https://skfb.ly/ouJRz"><i class="fa-sharp fa-solid fa-link"></i></a>
+                  </div>   
+            </div>
+            <div class="work">
+                <iframe
+                  frameborder="0" 
+                  allowfullscreen mozallowfullscreen="true"
+                  webkitallowfullscreen="true" 
+                  allow="autoplay; xr-spatial-tracking" 
+                  xr-spatial-tracking execution-while-out-of-viewport 
+                  execution-while-not-rendered web-share 
+                  src="https://sketchfab.com/models/97aa38d6971340ffb4ce13954dc0871a/embed?autospin=1&autostart=1&ui_theme=dark&dnt=1">
+                </iframe> 
+                <div class="layer">
+                  <h3>Urban 3D Model </h3>
+                  <p>Urban model of the Rolling Hills area</p>
+                  <a href="https://skfb.ly/ouJTP"><i class="fa-sharp fa-solid fa-link"></i></a>
+                </div>  
+            </div>  
+            <div class="work">
+              <img src="img/project-1.jpg">
+              <div class="layer">
+                <h3>North Tunisia Map</h3>
+                <p>A Map showing Sampling locations for a client </p>
+                <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+              </div> 
+            </div>
+
+            <div class="work">
+              <img src="img/project-2.jpg">
+              <div class="layer">
+                <h3>Mahdia's Map</h3>
+                <p>A map showing the sampling location done by one of my clients</p>
+                <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+              </div> 
+            </div>
+            
+          </div>
+          <a href="#" class="btn">View More</a>
+        </div>
+      </section>
+      <!----------------------------------------- Blog -------------------------------------------------------------->
+    
+
+      <!----------------------------------------- Contact section --------------------------------------------------->
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="subtitle">Contact Me</h1>
+              <p><i class="fa-sharp fa-solid fa-paper-plane"></i>mahdiabderrahmen@duck.com</p>
+              <p><i class="fa-solid fa-square-phone"></i>+21658050205</p>
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mahdi-madi-a835a0188/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Mahdi-abd-rahmen-Madi" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:mahdiabderrahmen@duck.com"target="_blank"><i class="fa-solid fa-square-envelope"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=21658050205" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/mahdi_abd_rahmen/"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+              <a href="assets/Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+              <form name="submit-to-google-sheet">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" inputmode="email" placeholder="Email" required>
+                <textarea name="message"  rows="5" placeholder="Type Your Request Here" required></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+              <span id="msg"></span>
+            </div>
+        </div>
+        
+      </section>
+      <!-------------------------------------- EARN PASSIVE INCOME ----------------------------------------->
+      <section>
+            <div class="banner">
+              <div>
+                <i class="fa-solid fa-circle-dollar-to-slot"></i>
+              </div>
+              <div>
+                <h2>Earn passive Income by Sharing your Bandwidth</h2>
+              </div>
+              <div>
+                <a href="https://r.honeygain.me/MAHDIB1F35" target="_blank"><button type="submit" class="btn3">Start Earning!</button></a>
+              </div>
+            </div>
+      </section>
+      
+      
+        
+    </main>
+  
+   
+  <!---------------- Dark mode switch button script --------------->
+  
+  <script>
+    let sun =document.getElementById("sun");
+    sun.onclick = function(){
+      sun.classList.toggle("night");
+    }
+  </script>
+
+  <!-------------------------- About Script ------------------------>
+  
+  <script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+  <!------------------ Responsive Side Menu on mobile devices ---------------->
+  
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+  
+  <!-------------------- Contact-form-script--------------------------->
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz_3bsO3nF8BAIPMNo7Bc3YEwJwqErWsDjp7HKbExNSpwR2MD5lT5EsdxD-ETCIt6IaIw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    
+    const msg = document.getElementById('msg')
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Your message has been sent successfully, I'll get back to you as soon as possible."
+          setTimeout(function(){msg.innerHTML = ""}, 5000);
+          form.reset()
+          console.log('Success!', response)
+          })
+        
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+  <!--------------------- Dark-theme sript --------------------->
+  <script type="text/partytown">
+    var toggleD = document.getElementById("toggleD");
+
+    toggleD.onclick = function() {
+      document.body.classList.toggle("dark-theme");
+    }
+
+  </script>
+  <!----------------------------- End of scripts ----------------------------->
+  <footer>
+    <span>
+        <a href="https://github.com/Mahdi-abd-rahmen-Madi" target="_blank">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" >
+        </a>
+    </span>
+    <span >
+        <a href="https://api.whatsapp.com/send?phone=21658050205" target="_blank">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384007.png"></a>
+    </span>
+    <span>
+        <a href="https://www.linkedin.com/in/mahdi-madi-a835a0188/" target="_blank">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" >
+        </a>
+    </span>
+    <span>
+        <a href="mailto:mahdiabderrahmen@duck.com"target="_blank">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png">
+        </a>
+    </span>
+    <span>
+        <a href="https://www.facebook.com/mahdi.abdrahmen.madi/" target="_blank">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/20/20673.png">
+        </a>
+    </span>
+    <span>
+        <a href="https://www.instagram.com/mahdi_abd_rahmen/" target="_blank">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png">
+        </a>
+    </span>
+  </footer>  
+</body>
+</html>
+    
