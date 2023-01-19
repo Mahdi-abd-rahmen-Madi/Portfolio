@@ -27,31 +27,27 @@
 
 
 <body>
-<header id="title-block-header">
-  <h1 class="title">FINANCY</h1>
-</header>
-<body>
-  
-
-  
   <!--
-  <p>For more insights and knowledge, Read the article below ⬇️⬇️ Feel
-    free to reach out to discuss any of topics mentionned in the article. <a href="https://www.linkedin.com/feed/hashtag/?keywords=crytocurrency">hashtag#crytocurrency</a>
-<a href="https://www.linkedin.com/feed/hashtag/?keywords=digitalcurrency">hashtag#digitalcurrency</a>
-<a href="https://www.linkedin.com/feed/hashtag/?keywords=inflationrate">hashtag#inflationrate</a>
-<a href="https://www.linkedin.com/feed/hashtag/?keywords=stacking">hashtag#stacking</a>
-<a href="https://www.linkedin.com/feed/hashtag/?keywords=investing">hashtag#investing</a>
-<a href="https://www.linkedin.com/feed/hashtag/?keywords=investingtips">hashtag#investingtips</a>
-<a href="https://www.linkedin.com/feed/hashtag/?keywords=investingadvice">hashtag#investingadvice</a></p>
-
+  <header id="title-block-header">
+    <h1 id="title">FINANCY</h1>
+  </header>
   -->
 
+  <script src="code.js"></script>
+
+  
+  <img class="banner" src="article-1-images/article 1.png" alt="investment dashboard banner image">
   <h1 id="title">
     Inflation and investing in cryptocurrency -
      How to survive the market without risking your future
   </h1>
-  <img class="banner" src="article-1-images/banner-1.jpg" alt="investment dashboard banner image">
 
+  <div class="hashtags">
+    <p>
+      #cryptocurrency #digitalcurrency #inflationrate #stacking #investing #investingtips #investingadvice
+    </p>
+  </div>
+  
   <h2 id="post">Abstract:</h2>
   <p>Inflation and investing in cryptocurrency can impact your financial future.
    Inflation erodes the value of money, while cryptocurrency investing can be risky.
@@ -239,15 +235,44 @@
       </a>
     </li>
   </ul>  
+
+
+
+
   <!--added by haydar-->
-  <div id="mail">
+  <div id="modal">
     <h1>Stay on top of crypto news, get daily updates in your inbox.</h1>
-    <p>your email</p>
-    <input type="mail"id="mai"placeholder="enter your mail">
-    <input type="submit"id="sub">
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <span id="email-error"></span>
+      <input class="btn" type="submit" value="Submit">
+    </form>
+    <script>
+      function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+    
+      var form = document.querySelector("form");
+      form.onsubmit = function(e) {
+        e.preventDefault();
+        var email = document.getElementById("email").value;
+        var emailError = document.getElementById("email-error");
+        if (validateEmail(email)) {
+            //email is valid
+            emailError.innerHTML = "";
+            form.submit();
+        } else {
+            //email is not valid
+            emailError.innerHTML = "Please enter a valid email address";
+        }
+      }
+    </script>
   </div>
-  <h1>Read Also</h1>
-  <section id="rm">
+
+  <section id="Read-also">
+    <h1>Read Also</h1>
     <div>
       <img src="">
       <span>
@@ -268,8 +293,50 @@
       </span>
     </div>
   </section>
-</body>
 
 
+
+
+  
+
+
+
+
+
 </body>
+
+<footer>
+  <span>
+      <a href="https://github.com/Mahdi-abd-rahmen-Madi" target="_blank">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png"  alt="Mahdi's GitHub">
+      </a>
+  </span>
+  <span >
+      <a href="https://api.whatsapp.com/send?phone=21658050205" target="_blank">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384007.png" alt="Mahdi's whatsapp"></a>
+  </span>
+  <span>
+      <a href="https://www.linkedin.com/in/mahdi-madi-a835a0188/" target="_blank">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="Mahdi's linkedin" >
+      </a>
+  </span>
+  <span>
+      <a href="mailto:mahdiabderrahmen@duck.com"target="_blank">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png" alt="Mahdi's email">
+      </a>
+  </span>
+  <span>
+      <a href="https://www.facebook.com/mahdi.abdrahmen.madi/" target="_blank">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/20/20673.png" alt="Mahdi's facebook">
+      </a>
+  </span>
+  <span>
+      <a href="https://www.instagram.com/mahdi_abd_rahmen/" target="_blank">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="Mahdi's instagram">
+      </a>
+  </span>
+</footer>  
+
+
+
 </html>
