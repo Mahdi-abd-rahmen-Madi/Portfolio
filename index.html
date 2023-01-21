@@ -27,6 +27,8 @@
   <body>
     <div class="scroll-tracker"></div>
     <main>
+      <div class="section-wrapper">
+      <section class="slides" id="home">
       <header class="section" id="header">
        <div class="container">
         <nav id="navbar">
@@ -38,9 +40,7 @@
             <li><a href="#portfolio"class="nav-link">Portfolio</a></li>
             <li><a href="#contact"class="nav-link">Contact</a></li>
             <li><a href="#blog"class="nav-link">Blog</a></li>
-            <li><a href="#resume"class="nav-link">Resume</a></li>
-
-            
+            <li><a href="#resume"class="nav-link">Resume</a></li>  
             <li>
               <div class="button-box" id="toggleD">
                 <div class="sun" id="sun">
@@ -51,7 +51,6 @@
                 </div> 
               </div>
             </li>
-            
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -61,8 +60,10 @@
           <h1 class="title">GIS Analyst | Self taught Web Developer</h1>
         </div>
       </header>
+      </section>
       <!--------------------- About ---------------------->  
-      <section id="about">
+      
+      <section class="slides "id="about">
         <div class="container">
           <div class="row">
             <div class="about-col-1">
@@ -91,7 +92,6 @@
               </div>
               <div class="tab-contents" id="experience">
                 <ul>
-                  <!--<li><span>Experience</span><br>short description</li>-->
                   <li>
                     <span>Field Surveryor In Partnership with Friedrich Association</span>
                     <br>
@@ -150,7 +150,7 @@
         </div>
       </section>
       <!---------------------- Services ------------------------->
-      <section id="services" >
+      <section class="slides "id="services" >
         <div class="container">
           <h1 class="subtitle">My Services</h1>
           <div class="services-list">
@@ -179,7 +179,7 @@
         </div>
       </section>
       <!--------------------------------------------------- Portfolio ------------------------------------------------------------>
-      <section id="portfolio">
+      <section class="slides"id="portfolio">
         <div class="container">
           <h1 class="subtitle">Portfolio</h1>
           <div class="work-list">
@@ -241,7 +241,7 @@
     
 
       <!----------------------------------------- Contact section --------------------------------------------------->
-      <section id="contact">
+      <section class="slides" id="contact">
         <div class="container">
           <div class="row">
             <div class="contact-left">
@@ -269,6 +269,7 @@
         </div>
         
       </section>
+      </div>
       <!-------------------------------------- EARN PASSIVE INCOME ----------------------------------------->
       
       <!--<section>
@@ -354,10 +355,12 @@
 
   <!--------------------- Dark-theme sript --------------------->
   
-  <script type="text/partytown"      var toggleD = document.getElementById("toggleD");
-
+  <script type="text/partytown"      
+  var toggleD = document.getElementById("toggleD");
   toggleD.onclick = function() {
-    document.body.classList.toggle("dark-theme");}></script>
+    document.body.classList.toggle("dark-theme");
+  }
+    ></script>
   <!----------------------------- End of scripts ----------------------------->
   <footer>
     <span>

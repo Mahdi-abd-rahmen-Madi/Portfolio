@@ -1,11 +1,6 @@
 :root {
   
- 
-  
   --blue-color:#1b9bff;
-
- 
-
   --dark-color: #252525;
   
   /*--font-1:font-family:GrandSlang Roman;*/
@@ -21,13 +16,12 @@
   --visited-color:#8A2EFF;
   --hover-color:rgba(233,40,201,0.8);
   --progress-color:#1b9bff;
-
-
   --Grad5-color:linear-gradient(108.08deg, #BBD2C5 0.53%, #536976 52.86%, #292E49 100%);
   --Grad6-color:linear-gradient(108.08deg, #536976 0.53%, #292E49 100%);
 }
 
 /* ========= Dark-theme ================== */
+
 .dark-theme {
   --primary-color:linear-gradient(108.08deg, #BBD2C5 0.53%, #536976 52.86%, #292E49 100%);
   --secondary-color:#fff;
@@ -37,6 +31,7 @@
   --visited-color:#B85EFF;
   --hover-color: rgb(233, 40, 201);
 }
+
 
 /* ========= basic ========= */
 
@@ -771,8 +766,22 @@ footer{
 
 .project-element:nth-child(2){transition-delay: 200ms;}
 
+*/
+.section-wrapper {
+  width:100%;
+  height:100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
 
-
+.slides {
+  width:100%;
+  height:100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  scroll-snap-align:start;
+}
 
 
 
