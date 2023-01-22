@@ -26,8 +26,20 @@
 
   <body>
     <div class="scroll-tracker"></div>
+
+    <div id="preloader">
+      <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="section-wrapper">
     <main>
-      <div class="section-wrapper">
       <section class="slides" id="home">
       <header class="section" id="header">
        <div class="container">
@@ -39,8 +51,7 @@
             <li><a href="#services"class="nav-link">Services</a></li>
             <li><a href="#portfolio"class="nav-link">Portfolio</a></li>
             <li><a href="#contact"class="nav-link">Contact</a></li>
-            <li><a href="#blog"class="nav-link">Blog</a></li>
-            <li><a href="#resume"class="nav-link">Resume</a></li>  
+            <li><a href="/blog/blog.html"class="nav-link">Blog</a></li>
             <li>
               <div class="button-box" id="toggleD">
                 <div class="sun" id="sun">
@@ -63,7 +74,7 @@
       </section>
       <!--------------------- About ---------------------->  
       
-      <section class="slides "id="about">
+      <section class="slides"id="about">
         <div class="container">
           <div class="row">
             <div class="about-col-1">
@@ -108,11 +119,10 @@
                     <br>
                     <span style="padding-bottom:50px">Skills</span>
                     <br> Marketing · Market Research · Communication 
-                    
                   </li>
-                  
                 </ul>
               </div>
+
               <div class="tab-contents" id="education">
                 <ul>
                   <li>
@@ -120,17 +130,16 @@
                     <br>
                     <small> Sep 2021 - Jun 2023 [FST Manar-Tunis]</small> 
                     <br>
-                    
                   </li>
                   <li>
                     <span>Licentiate degree in Earth Science </span>
                     <br>
                     <small> Sep 2018 - Jun 2021 [FST Manar-Tunis]</small>
-                    <br>
-                   
+                    <br> 
                   </li>
                 </ul>
               </div>
+
               <div class="tab-contents" id="certifications">
                 <ul>
                   <li>
@@ -196,7 +205,7 @@
                   <div class="layer">
                     <h3>Geological 3D Model</h3>
                     <p>Slope map of the Rolling Hills area</p>
-                    <a href="https://skfb.ly/ouJRz"><i class="fa-sharp fa-solid fa-link"></i></a>
+                    <a href="https://skfb.ly/ouJRz" target="_blank"><i class="fa-sharp fa-solid fa-link"></i></a>
                   </div>   
             </div>
             <div class="work">
@@ -212,7 +221,7 @@
                 <div class="layer">
                   <h3>Urban 3D Model </h3>
                   <p>Urban model of the Rolling Hills area</p>
-                  <a href="https://skfb.ly/ouJTP"><i class="fa-sharp fa-solid fa-link"></i></a>
+                  <a href="https://skfb.ly/ouJTP" target="_blank" ><i class="fa-sharp fa-solid fa-link"></i></a>
                 </div>  
             </div>  
             <div class="work">
@@ -225,10 +234,10 @@
             </div>
 
             <div class="work">
-              <img src="img/project-2.jpg">
+              <img src="img/project-2.jpg" alt="A map showing sampling coordinates">
               <div class="layer">
                 <h3>Mahdia's Map</h3>
-                <p>A map showing the sampling location done by one of my clients</p>
+                <p>A map showing sampling coordinates of</p>
                 <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
               </div> 
             </div>
@@ -361,6 +370,17 @@
     document.body.classList.toggle("dark-theme");
   }
     ></script>
+
+
+  <!----------------------------- preloader script----------------------------->
+  <script>
+    var loader = document.getElementById("preloader");
+
+    window.addEventListener("load", function(){
+      loader.style.display = "none";
+    })
+    
+  </script>
   <!----------------------------- End of scripts ----------------------------->
   <footer>
     <span>
