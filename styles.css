@@ -53,11 +53,11 @@ main {
   background-size: cover;
   background-repeat:repeat;
 }
-
 /* ========= End basic ========= */
 
-/* ========= pre loader  ========= */
 
+
+/* ========= pre loader  ========= */
 
 #preloader {
   background:var(--dark-color);
@@ -169,7 +169,9 @@ main {
 .track div {
   flex: 1;
 }
-/* ========= Slides ========= */
+
+
+/* ===========================  Slides ============================================================== */
 
 .section-wrapper {
   width:100%;
@@ -177,7 +179,6 @@ main {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
-
 .slides {
   width:100%;
   height:100vh;
@@ -187,9 +188,10 @@ main {
   scroll-snap-align:start;
 }
 
-/* ========= End Slides ========= */
+/* =========================== End Slides =========================================================== */
 
-/* ========= Show elements on scroll ========= */
+
+/* ========= Show elements on scroll 
 
 .hidden {
   opacity: 0;
@@ -201,6 +203,10 @@ main {
   filter: blur(0);
   transform: translateY(0);
 }
+
+
+/*==========================================*/
+
 
 /* ========== Text Styles ========== */
 
@@ -232,6 +238,8 @@ p {
   transition: all 0.5s ease-in-out;
 }
 /* ========== End Text Styles ========== */ 
+
+
 
 /* ========== Scroll Tracker ========== */
 .scroll-tracker {
@@ -419,19 +427,6 @@ section {
   0% {background-position:-1050px 0;}
 }
 
-/*.header-text h1 span {
-  color:var(--title-color);
-  font-size: 4rem;
-  font-weight: 900;
-}*/
-
-/*.header-text p {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color:var(--subtitle-color);
-  text-align: center;
-}*/
-
 
 /* ==========  About Section Styling   ========== */
 #about {
@@ -498,7 +493,10 @@ section {
 .tab-contents.active-tab{
   display:block;
 }
+
+
 /* ==========  Services Section Styling   ========== */
+
 #services {
   padding: 4%;
   color: var(--secondary-color);
@@ -531,13 +529,7 @@ section {
   font-weight: 700;
   text-align: left;
 }
-/*
-.services-list div p {
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-align: left;
-}
-*/
+
 .services-list div a {
   font-size: 1rem;
   font-weight: 300;
@@ -716,67 +708,6 @@ form .btn2 {
   margin-top:-40px;
   display:block;
 }
-
-
-/* =========== Banner =================== */
-
-.banner {
-  width:50vw;
-  height:10vh;
-  margin:0 auto;
-  position: relative;
-  display:flex;
-  padding: 1%;
-  flex-direction:row;
-  align-items: center; 
-  background:yellow;
-  border-radius:10px; 
-}
-
-.banner:hover {
-  background:var(--dark-color);
-  color:var(--secondary-color);
-  transition:background 0.5s;
-  cursor:pointer;
-}
-
-.banner div {
-  padding:5%;
-}
-.banner h2 {
-  align-items: center;
-  padding:0;
-  line-height: 1.5rem;
-  font-weight: 700;
-  font-size:0.8rem;
-}
-.banner i {
-  transform: scale(2.8);
-  padding:5%;
-}
-
-
-.btn3 {
-  color:var(--secondary-color);
-  background-color: var(--dark-color);
-  display:block;
-  margin : 5px auto ;
-  width: fit-content;
-  border : 1px solid var(--visited-color);
-  padding: 10px 50px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.5s;
-}
-.btn3:hover {
-  background: var(--visited-color);
-}
-
-
-
-
-
 
 
 /* ============ attribution =========== */
