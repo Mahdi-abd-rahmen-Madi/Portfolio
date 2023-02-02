@@ -18,9 +18,11 @@
 
       gtag('config', 'G-MMLVBPBEGQ');
     </script>
-
     <script defer src="app.js" type="module"></script>
+    <!-- fontawsesome kit-->
     <script src="https://kit.fontawesome.com/97a93053e0.js" crossorigin="anonymous"></script>
+    <!-- Wavesurfer.js -->
+    <script src="https://unpkg.com/wavesurfer.js"></script>
   </head>
   
 
@@ -52,6 +54,17 @@
             <li><a href="#portfolio"class="nav-link">Portfolio</a></li>
             <li><a href="#contact"class="nav-link">Contact</a></li>
             <li><a href="/blog/blog.html"class="nav-link">Blog</a></li>
+            <li><div class="music-box"> 
+              <div class="track">
+                <img src="/img/media/play.png" id="playBtn" alt="play button">
+                <div id="waveform"></div>
+              </div>
+              <div>
+                <p>neheart x reidenshi</p>
+                <h1>snowfall</h1>
+              </div>
+              </div>
+            </li>
             <li>
               <div class="button-box" id="toggleD">
                 <div class="sun" id="sun">
@@ -78,7 +91,7 @@
         <div class="container">
           <div class="row">
             <div class="about-col-1">
-              <img src="img/portfolio.jpg" alt="personal profile image">
+              <img src="img/portrait.webp" alt="personal profile image">
             </div>
             <div class="about-col-2">
               <h1 class="subtitle">About Me</h1>
@@ -225,7 +238,7 @@
                 </div>  
             </div>  
             <div class="work">
-              <img src="img/project-1.jpg">
+              <img src="img/project-1.webp" alt="A map showing sampling locations">
               <div class="layer">
                 <h3>North Tunisia Map</h3>
                 <p>A Map showing Sampling locations for a client </p>
@@ -234,7 +247,7 @@
             </div>
 
             <div class="work">
-              <img src="img/project-2.jpg" alt="A map showing sampling coordinates">
+              <img src="img/project-2.webp" alt="A map showing sampling coordinates">
               <div class="layer">
                 <h3>Mahdia's Map</h3>
                 <p>A map showing sampling coordinates of</p>
@@ -299,6 +312,27 @@
       <!------------------------------------- End Passive Income ---------------------------------------------->
         
     </main>
+
+
+    <!----------------------------------------- Partytown : Lazy loading for scripts ---------------------------------------------------------->
+    
+    <script>
+      partytown = {
+        forward:['dataLayer.push'],
+      };
+    </script>
+    
+    
+    
+    <script type="module">
+      import { partytownSnippet } from '@builder.io/partytown/integration';
+      const snippetText = partytownSnippet();
+      const el = document.createElement('script');
+      el.innerText = snippetText;
+      document.body.appendchild(el);
+    </script>
+
+
   
    
   <!---------------- Dark mode switch button script --------------->
@@ -380,6 +414,39 @@
       loader.style.display = "none";
     })
     
+  </script>
+
+  <!----------------------------- wavesurfer JS  ----------------------------->
+  <script>
+    
+    var playBtn = document.getElementById("playBtn");
+    
+    var wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: '#fff',
+      progressColor: '#8A2EFF',
+      barWidth: 3,
+      responsive: true,
+      height: 30,
+      barRadius: 3,
+    });
+
+    wavesurfer.load('assets/snowfall.mp3');
+
+    playBtn.onclick - function(){
+      wavesurfer.playPause();
+      if(playBtn.src.includes("play.png")){
+        playBtn.src = "img/media/pause.png";
+      }else{
+        playBtn.src = "img/media/play.png";
+      }
+    }
+
+    wavesurfer.on('finish', function(){
+      playBtn.src = "img/media/play.png";
+      wavesurfer.stop();
+    })
+
   </script>
   <!----------------------------- End of scripts ----------------------------->
   <footer>

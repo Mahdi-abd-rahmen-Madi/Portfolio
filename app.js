@@ -1,10 +1,3 @@
-// Lazy loading for scripts 
-
-import { partytownSnippet } from '@builder.io/partytown/integration';
-
-const snippetText = partytownSnippet();
-
-
 // Scroll tracker for the timeline
 
 import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';

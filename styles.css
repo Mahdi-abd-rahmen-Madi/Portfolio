@@ -127,6 +127,48 @@ main {
   }
 }
 
+/* ========= End pre loader  ========= */
+
+/* ========= music box  ========= */
+
+.music-box {
+  width:150px;
+  height:40px;
+  background :var(--dark-color);
+  border-radius:20px;
+  position: absolute;
+  right:105px;
+  top:10px;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.music-box h1, .music-box p{
+  font-size: 0.7rem;
+  text-align: center;
+  color:var(--secondary-color);
+}
+
+.track {
+  display:flex;
+  align-items:center;
+}
+
+.track img {
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor:pointer;
+}
+
+.track div {
+  flex: 1;
+}
 /* ========= Slides ========= */
 
 .section-wrapper {
