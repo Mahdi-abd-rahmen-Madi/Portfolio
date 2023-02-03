@@ -4,8 +4,8 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+<sitemap xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
 <url>
   <loc>https://mahdi-abd-rahmen-madi.github.io/portfolio/</loc>
@@ -17,6 +17,45 @@
   <lastmod>2023-02-02T14:05:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
+<url>
+  <loc>https://mahdi-abd-rahmen-madi.github.io/portfolio/index.html</loc>
+  <image:image>
+    <image:loc>https://mahdi-abd-rahmen-madi.github.io/portfolio/img/media/logo.png</image:loc>
+    <image:title>Logo Image FINANCY</image:title>
+    <image:caption>Logo image of the blog serie FINANCY</image:caption>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://mahdi-abd-rahmen-madi.github.io/portfolio/img/portrait.webp</image:loc>
+    <image:title>Profile picture of Mahdi Madi</image:title>
+    <image:caption>Profile picture of mahdi-abd-rahmen-madi</image:caption>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://mahdi-abd-rahmen-madi.github.io/portfolio/img/project-1.webp</image:loc>
+    <image:title>Demo of GIS project 1</image:title>
+    <image:caption>A map showing sampling locations in north Tunisia</image:caption>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://mahdi-abd-rahmen-madi.github.io/portfolio/img/project-2.webp</image:loc>
+    <image:title>Demo of GIS project 2</image:title>
+    <image:caption>A map showing sampling coordinates in coast city of Mahdia - Tunis</image:caption>
+  </image:image>
+
+  <image:image>
+  <image:loc>https://mahdi-abd-rahmen-madi.github.io/portfolio/img/urban.webp</image:loc>
+  <image:title>Urban model of the Rolling Hills US area</image:title>
+  <image:caption>3D Urban model of the Rolling Hills US area generated with Blender</image:caption>
+  </image:image>
+
+  <image:image>
+  <image:loc>https://mahdi-abd-rahmen-madi.github.io/portfolio/img/slope.webp</image:loc>
+  <image:title>Slope map of the Rolling Hills US area</image:title>
+  <image:caption>Slope map of the Rolling Hills US area generated with ArcGIS and Blender</image:caption>
+</url>
+
 
 
 </urlset>
