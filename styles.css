@@ -766,6 +766,7 @@ footer{
   
   .work img {
     height:25vh;
+    aspect-ratio: 16/9;
   }
 
   #portfolio {
