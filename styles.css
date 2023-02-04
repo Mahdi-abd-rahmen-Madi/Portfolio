@@ -577,6 +577,7 @@ section {
   height:250px;
   width:480px;
   transition : transform 0.5s;
+  aspect-ratio: 16/9;
 }
 
 .layer {

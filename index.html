@@ -300,27 +300,6 @@
         
     </main>
 
-
-    <!----------------------------------------- Partytown : Lazy loading for scripts ---------------------------------------------------------->
-    
-    <script>
-      partytown = {
-        forward:['dataLayer.push'],
-      };
-    </script>
-    
-    
-    
-    <script type="module">
-      import { partytownSnippet } from '@builder.io/partytown/integration';
-      const snippetText = partytownSnippet();
-      const el = document.createElement('script');
-      el.innerText = snippetText;
-      document.body.appendchild(el);
-    </script>
-
-
-  
    
   <!---------------- Dark mode switch button script --------------->
   
@@ -385,6 +364,7 @@
 
   <!--------------------- Dark-theme sript --------------------->
   
+
   <script type="text/partytown"      
   var toggleD = document.getElementById("toggleD");
   toggleD.onclick = function() {
