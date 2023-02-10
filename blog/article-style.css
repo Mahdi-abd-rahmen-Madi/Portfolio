@@ -12,6 +12,7 @@
   --visited-color:#8A2EFF;
   --hover-color:rgba(233,40,201,0.8);
   --progress-color:#1b9bff;
+  --blog-theme: #a3f1a4;
 
 
   --Grad5-color:linear-gradient(108.08deg, #BBD2C5 0.53%, #536976 52.86%, #292E49 100%);
@@ -30,7 +31,9 @@
 
 html {
     line-height: 1.5;
-    font-family: Georgia, serif;
+    font-family: Georgia, serif , -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
     font-size: 1rem;
     color: var(--primary-color);
     background-color:var(--secondary-color);
@@ -40,6 +43,7 @@ html {
     box-sizing: border-box;
     padding:0;
     margin:0;
+    scrollbar-width: thin;
 }
     
 body {
@@ -288,25 +292,24 @@ ul.task-list li input[type="checkbox"] {
 
 #read-also {
     display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width:100%;
-    height: 100%;
+    flex-direction: column;
+
 }
 
-#read-also legend {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 10px;
-    text-align: center;
-margin-top: 10px;}
+.read-also-container {
+    display:flex;
+    flex: row;
+    flex-wrap: nowrap;
+    padding:10px;
+}
 
-#read-also div{
-    width:100%;
-    height: 100%;
-    border:0.5px solid gray;
-    }
-#rm div {display: flex;}
+
+#read-also img {
+    width:200px;
+    height: 150px;
+    padding: 5px;
+}
+
 
 
 
@@ -322,9 +325,9 @@ margin-top: 10px;}
     transition: background 1s,transform 1s;
 }
 .icon:hover{
-    background-color:var(--visited-color);
-    border:1px solid var(--visited-color);
-    transform:translateY(-5px);
+    background-color:var(--blog-theme);
+    border:1px solid var(--blog-theme);
+    transform:translateX(-7px);
 }
 
 footer a{
@@ -340,11 +343,13 @@ footer{
     scroll-margin-bottom: 0%;
     width: 100%;
     height:auto;
-    display:grid;
+    display:flex;
+    flex-direction: column;
     justify-content:center;
     align-items: center;
     position:fixed;
-    bottom:0%;
+    bottom:30%;
+    left: 48%;
 }
 
 
