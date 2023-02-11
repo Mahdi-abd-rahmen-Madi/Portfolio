@@ -1,3 +1,13 @@
+// pre loader   
+
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function(){
+  loader.style.display = "none";
+})
+
+
+
 // Scroll tracker for the timeline
 
 import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
@@ -22,6 +32,12 @@ scrollTracker.animate(
     }
 );
 
+// ======================== Dark mode ========================
+
+var toggleD = document.getElementById("toggleD");
+toggleD.onclick = function() {
+  document.body.classList.toggle("dark-theme");
+}
 
 // Nav scrolled class
 
@@ -52,6 +68,41 @@ sectionOneOptions);
 sectionOneObserver.observe(sectionOne);
 
 
+// ======================== Dark mode switch button ========================
+
+let sun =document.getElementById("sun");
+    sun.onclick = function(){
+      sun.classList.toggle("night");
+    }
+
+
+// ======================== Responsive Side Menu on mobile devices ========================
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+function closemenu(){
+  sidemenu.style.right = "-200px";
+}
+
+// ======================== About ========================
+
+var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+      for(let tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(let tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
 // Hide and show Headlines on scroll
 
 /*const observer = new IntersectionObserver((entries) => {
@@ -73,3 +124,58 @@ const hiddenElements = document.querySelectorAll('.hidden');
 */
 
 
+// ======================== Submit to google sheets ========================
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz_3bsO3nF8BAIPMNo7Bc3YEwJwqErWsDjp7HKbExNSpwR2MD5lT5EsdxD-ETCIt6IaIw/exec'
+const form = document.forms['submit-to-google-sheet']
+
+const msg = document.getElementById('msg')
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      msg.innerHTML = "Your message has been sent successfully, I'll get back to you as soon as possible."
+      setTimeout(function(){msg.innerHTML = ""}, 5000);
+      form.reset()
+      console.log('Success!', response)
+      })
+    
+    .catch(error => console.error('Error!', error.message))
+})
+
+
+
+// ======================== Extra  ========================
+
+
+// ======================== Wavesurfer  ========================
+
+var playBtn = document.getElementById("playBtn");
+    
+    var wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: '#fff',
+      progressColor: '#8A2EFF',
+      barWidth: 3,
+      responsive: true,
+      height: 30,
+      barRadius: 3,
+    });
+
+    wavesurfer.load('assets/snowfall.mp3');
+
+    playBtn.onclick - function(){
+      wavesurfer.playPause();
+      if(playBtn.src.includes("play.png")){
+        playBtn.src = "img/media/pause.png";
+      }else{
+        playBtn.src = "img/media/play.png";
+      }
+    }
+
+    wavesurfer.on('finish', function(){
+      playBtn.src = "img/media/play.png";
+      wavesurfer.stop();
+    })
