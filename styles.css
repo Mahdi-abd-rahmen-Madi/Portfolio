@@ -216,7 +216,7 @@ main {
 
 @font-face {
   font-family: 'Baskervville';
-  src:local('Baskervville'), url(/fonts/baskerville-font/BASKE1.ttf) format('ttf');
+  src:local('Baskervville'), url(fonts/baskerville-font) format('ttf');
   font-display: swap;
   -webkit-font-smoothing: antialiased;
 }
@@ -236,12 +236,14 @@ p {
   color:var(--secondary-color);
   font-weight:500;
 }
+
+
 .title {
   color:var(--secondary-color);
+  display:flex;
   font-size: 12rem;
   text-align: center;
   place-items: center;
-  justify-content: center;
   opacity:0.9;
 }
 .title:hover{
