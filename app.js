@@ -10,7 +10,7 @@ window.addEventListener("load", function(){
 
 // Scroll tracker for the timeline
 
-import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
+/*import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
 
 const scrollTracker = document.querySelector('.scroll-tracker');
 
@@ -31,7 +31,7 @@ scrollTracker.animate(
         timeline: scrollTrackingTimeline,
     }
 );
-
+*/
 // ======================== Dark mode ========================
 
 var toggleD = document.getElementById("toggleD");
@@ -138,7 +138,7 @@ form.addEventListener('submit', e => {
 
 // ======================== Wavesurfer  ========================
 
-var playBtn = document.getElementById("playBtn");
+/*var playBtn = document.getElementById("playBtn");
     
     var wavesurfer = WaveSurfer.create({
       container: '#waveform',
@@ -164,4 +164,4 @@ var playBtn = document.getElementById("playBtn");
     wavesurfer.on('finish', function(){
       playBtn.src = "img/media/play.png";
       wavesurfer.stop();
-    })
+    })*/
