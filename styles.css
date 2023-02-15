@@ -41,8 +41,8 @@ html {
   font-size: 1rem;  
 } 
 body {
-  font-family: 'Baskervville', serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Libre Baskerville', serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial;
   width:100%;
   height:100%;
   font-display: optional;
@@ -206,12 +206,12 @@ main {
 
 /* ========== Text Styles ========== */
 
-@font-face {
+/*@font-face {
   font-family: 'Baskervville';
   src:local('Baskervville'), url(fonts/baskerville-font) format('ttf');
   font-display: swap;
   -webkit-font-smoothing: antialiased;
-}
+}*/
 
 h1 {
   font-family: 'Anton', sans-serif;
