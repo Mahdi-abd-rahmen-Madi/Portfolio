@@ -132,36 +132,3 @@ form.addEventListener('submit', e => {
 })
 
 
-
-// ======================== Extra  ========================
-
-
-// ======================== Wavesurfer  ========================
-
-/*var playBtn = document.getElementById("playBtn");
-    
-    var wavesurfer = WaveSurfer.create({
-      container: '#waveform',
-      waveColor: '#fff',
-      progressColor: '#8A2EFF',
-      barWidth: 3,
-      responsive: true,
-      height: 30,
-      barRadius: 3,
-    });
-
-    wavesurfer.load('assets/snowfall.mp3');
-
-    playBtn.onclick - function(){
-      wavesurfer.playPause();
-      if(playBtn.src.includes("play.png")){
-        playBtn.src = "img/media/pause.png";
-      }else{
-        playBtn.src = "img/media/play.png";
-      }
-    }
-
-    wavesurfer.on('finish', function(){
-      playBtn.src = "img/media/play.png";
-      wavesurfer.stop();
-    })*/
