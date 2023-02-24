@@ -34,13 +34,19 @@ scrollTracker.animate(
 */
 // ======================== Dark mode ========================
 
-var toggleD = document.getElementById("toggleD");
-toggleD.onclick = function() {
+var icon = document.getElementById("theme");
+theme.onclick = function() {
   document.body.classList.toggle("dark-theme");
+  if(document.body.classList.contains("dark-theme")){ 
+    theme.src ="img/icons/weather-night.png"
+  }else{
+    theme.src ="img/icons/white-balance-sunny.png"
+  }
+
 }
 
 // Nav scrolled class
-
+/*
 const header = document.querySelector('header');
 const sectionOne = document.querySelector('#about');
 
@@ -70,9 +76,9 @@ sectionOneObserver.observe(sectionOne);
 
 // ======================== Dark mode switch button ========================
 
-let sun =document.getElementById("sun");
+/*let sun =document.getElementById("sun");
     sun.onclick = function(){
-      sun.classList.toggle("night");
+      sun.classList.toggle("moon");
     }
 
 
