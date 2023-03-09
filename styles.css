@@ -182,13 +182,15 @@ main {
   justify-content: center;
   gap: 50px;
   scroll-snap-align:start;
+  transition: all 1s;
+ 
 }
 
 /* =========================== End Slides =========================================================== */
 
 
 /* ========= Show elements on scroll 
-
+*/
 .hidden {
   opacity: 0;
   filter: blur(5px);
@@ -228,8 +230,6 @@ p {
   color:var(--secondary-color);
   font-weight:500;
 }
-
-
 .title {
   color:var(--secondary-color);
   display:flex;
@@ -275,9 +275,17 @@ p {
 }
 
 .logo {
-  width:40px;
+  width: 40px;
   height:40px;
   border-radius: 50%;
+  position: absolute;
+  left:20px;
+  top:15px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  overflow:hidden;
+  
 }
 
 nav ul li {
@@ -285,6 +293,8 @@ nav ul li {
   margin:10px 20px;
   list-style: none;
   text-align:center;
+  align-items: center;
+  justify-content: center;
 }
 .nav-link {
   position: relative;
@@ -304,7 +314,7 @@ nav ul li {
   bottom:-5px;
 }
 .nav-link:hover::after {
-  width:70%;
+  width:90%;
   transition:0.5s;
 }
 
@@ -336,20 +346,18 @@ nav ul li {
   width:24px;height:24px;
 }
 
-/* ==========  End navigation bar  ========== */
+/* ===================================  End navigation bar        ============================================== */
 
 /* ===================================  Default Section Styling   ============================================== */
-
 section {
   place-items:center;
   min-height:100vh;
   padding:10% 10vw;
   overflow: hidden;
 }
-
 /* ===================================  Custom Section Styling    ============================================= */
 
-/* ==========  Home Section Styling   ========== */
+/* ===================================  Home Section Styling      ============================================= */
 #home {
   display:flex;
 }
