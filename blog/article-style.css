@@ -44,18 +44,20 @@ html {
     padding:0;
     margin:0;
     scrollbar-width: thin;
+    background-color: var(--fourth-color);
 }
     
 body {
     display:flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 720px;
-    padding: 2rem;
+    max-width: 780px;
+    padding: 0 2rem;
     hyphens: auto;
     overflow-wrap: break-word;
     text-rendering: optimizeLegibility;
     font-kerning: normal;
+    background-color: var(--secondary-color);
 }
  
 p {line-height: 2; margin: 0.7rem 0;font-size: clamp(0.8rem,2vw,1rem);}
@@ -81,6 +83,12 @@ img {
     margin-bottom:25px;
 }
 
+#banner {
+    display : flex;
+    align-items: center;
+    place-content: center;
+    margin-bottom: 2rem;
+}
 .banner {
     padding:0;
     margin:0;
@@ -265,9 +273,10 @@ ul.task-list li input[type="checkbox"] {
     width:80%;
     height: 80%;
     text-align:center;
-    border:1px solid black;
+    border:0.5px solid black;
     border-radius: 10px;
     background-color:solid black;
+    padding:2%;
     margin:0 auto;
     margin: 10%;
 }

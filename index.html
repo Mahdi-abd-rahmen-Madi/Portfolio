@@ -47,37 +47,23 @@
        <div class="container">
         <nav id="navbar">
           <img src="img/logo.png" class="logo" alt="FINANCY Logo">
-          <ul  id="sidemenu">
-            <li><a href="#header"class="nav-link active">Home</a></li>
-            <li><a href="#about"class="nav-link">About</a></li>
-            <li><a href="#services"class="nav-link">Services</a></li>
-            <li><a href="#portfolio"class="nav-link">Portfolio</a></li>
-            <li><a href="#contact"class="nav-link">Contact</a></li>
-            <!--<li><a href="blog/blog.html"class="nav-link">Blog</a></li>-->
-            <!--<li><div class="music-box"> 
-              <div class="track">
-                <img src="img/media/play.png" id="playBtn" alt="play button">
-                <div id="waveform"></div>
-              </div>
-              <div>
-                <p>neheart x reidenshi</p>
-                <h1>snowfall</h1>
-              </div>
-              </div>
-            </li>-->
-            <li>
-              <div class="button-box">
-                <img id="theme" src="img/icons/white-balance-sunny.png">
-              </div>
-            </li>
+          <div id="sidemenu">
+            <div id="nav-links">
+            <a href="#header"class="nav-link active">Home</a>
+            <a href="#about"class="nav-link">About</a>
+            <a href="#services"class="nav-link">Services</a>
+            <a href="#portfolio"class="nav-link">Portfolio</a>
+            <a href="#contact"class="nav-link">Contact</a>
+            <a href="blog/blog.html"class="nav-link">Blog</a>
+            </div>
+            <div id="nav-bg-pattern"></div>
+            <div class="button-box">
+              <img id="theme" src="img/icons/white-balance-sunny.png">
+            </div>
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+           </div> 
         </nav>
-        <div class="header-text">
-          <h1 class="title">GIS Specialist | Catrographer</h1>
-        </div>
       </header>
       </section>
       <!--------------------- About ---------------------->  
@@ -89,12 +75,10 @@
               <img src="img/portrait.webp" alt="personal profile image">
             </div>
             <div class="about-col-2">
-              <h1 class="subtitle">About Me</h1>
-              <p>
-                GIS analyst and self-taught web developer.
-                 I love to code,
-                 but I also enjoy Cartography and Data Science.
-              </p>
+              <div class="header-text">
+                <h1 class="title">GIS Specialist | Catrographer</h1>
+              </div>
+
               <div class="tab-titles">
                 <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                 <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -163,7 +147,7 @@
       <!---------------------- Services ------------------------->
       <section class="slides "id="services" >
         <div class="container">
-          <h1 class="subtitle">My Services</h1>
+          <h1 class="subtitle">Services</h1>
           <div class="services-list">
             <div>
               <i class="fa-solid fa-code"></i>

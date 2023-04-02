@@ -1,4 +1,32 @@
+:root {
+    --blue-color:#1b9bff;
+    --dark-color: #252525;
+  /* ==================== Light theme ==================== */
+  --primary-color:linear-gradient(108.08deg, #076585 0.54%, #FFFFFF 100%);
+  --secondary-color:#fff;
+  --tertiary-color:#ff004f;
+  --fourth-color:#ababab;
+  --dark-color: #252525;
+  --title-color: #FFE898;
+  --subtitle-color:#F7ECDE;
+  --visited-color:#8A2EFF;
+  --hover-color:rgba(233,40,201,0.8);
+  --progress-color:#1b9bff;
+  --blog-theme: #a3f1a4;
 
+
+  --Grad5-color:linear-gradient(108.08deg, #BBD2C5 0.53%, #536976 52.86%, #292E49 100%);
+  --Grad6-color:linear-gradient(108.08deg, #536976 0.53%, #292E49 100%);
+}
+/* ========= Dark-theme ================== */
+.dark-theme {
+  --primary-color:linear-gradient(108.08deg, #BBD2C5 0.53%, #536976 52.86%, #292E49 100%);
+  --secondary-color:#fff;
+  --title-color:#FFD166;
+  --subtitle-color:#F7ECDE;
+  --visited-color:#B85EFF;
+  --hover-color: rgb(233, 40, 201);
+}
 
 
 img {display:flex; 
