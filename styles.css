@@ -616,7 +616,7 @@ section {
 }
 
 .social-icons {
-  margin-top: 30px;
+  margin-top: clamp(5px,10px,30px);
 }
 .social-icons a {
   text-decoration: none;
@@ -636,16 +636,15 @@ section {
   background:var(--visited-color);
 }
 
-.contact-right form {
-  width:100%;
-}
+.contact-right form {width:100%;}
+
 form input, form textarea{
   width:100%;
   border:0;
   outline:none;
   background:var(--dark-color);
-  padding:15px;
-  margin:15px 0;
+  padding:clamp(10px, 12.5px, 15px);
+  margin:10px 0;
   color:var(--secondary-color);
   font-size: 1rem;
   border-radius:6px;
@@ -721,42 +720,32 @@ section {
   overflow:hidden ;
 }
   
-  .work img {
-    height:15vh;
-    aspect-ratio: 16/9;
-  }
+.work img {
+  height:15vh;
+  aspect-ratio: 16/9;
+}
  
- 
+.header-text h1 {
+  font-size:1.25rem;
+}
   
+.contact-left, .contact-right {flex-basis: 100%;}
   
+.subtitle {
+  font-size:1.5rem;
+}
+.about-col-1,.about-col-2 {
+  flex-basis:100%;
+}
   
-  /* =============== navigation bar =============*/
-  .header-text h1 {
-    font-size:1.25rem;
-  }
-  
-  .subtitle {
-    font-size:1.5rem;
-  }
-  .about-col-1,.about-col-2 {
-    flex-basis:100%;
-  }
-  
-  .tab-links {
-    font-size :1rem;
-    margin-right:20px;
-  }
+.tab-links {
+  font-size :1rem;
+  margin-right:20px;
+}
    
 
-  /*=============== Services ==================*/
-  /**
-  .services-list {
-    grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
-    margin-top: 70px;
-    margin-bottom: 5px;
-  }
   
-  /*=============== Attribution ================*/
+/*=============== Attribution ================*/
   
   
   .icon{
