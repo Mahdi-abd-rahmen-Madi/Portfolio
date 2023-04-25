@@ -8,9 +8,10 @@
     <meta name="description" content="freeCodeCamp Personal Portfolio Responsive Web Design project" />    
     <title class="title"> Mahdi's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <!--
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=libre-baskerville:400,700" rel="stylesheet" />
-    
+    -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMLVBPBEGQ"></script>
     <script>
@@ -21,14 +22,13 @@
       gtag('config', 'G-MMLVBPBEGQ');
     </script>
     <script defer src="app.js" type="module"></script>
+    <script src="tabs.js"></script>
     <!-- fontawsesome kit-->
     <script src="https://kit.fontawesome.com/97a93053e0.js" crossorigin="anonymous"></script>
   </head>
-  
-
+  <!------------------------------------------------------------End Head ----------------------------------------->  
   <body>
     <!--<div class="scroll-tracker"></div>-->
-
     <div id="preloader">
       <div class="spinner">
         <div></div>
@@ -39,35 +39,37 @@
         <div></div>
       </div>
     </div>
-
+    <!-------------------------------------------------------- End preloader ----------------------------------->
     <div class="section-wrapper">
     <main>
       <section class="slides" id="home">
       <header class="section" id="header">
-       <div class="container">
+      <div class="container">
         <nav id="navbar">
           <img src="img/logo.png" class="logo" alt="FINANCY Logo">
-          <div id="sidemenu">
+          <div id="menu ">
             <div id="nav-links">
-            <a href="#header"class="nav-link active">Home</a>
-            <a href="#about"class="nav-link">About</a>
-            <a href="#services"class="nav-link">Services</a>
-            <a href="#portfolio"class="nav-link">Portfolio</a>
-            <a href="#contact"class="nav-link">Contact</a>
-            <a href="blog/blog.html"class="nav-link">Blog</a>
+              <a href="#header"class="nav-link">Home</a>
+              <a href="#about"class="nav-link">About</a>
+              <a href="#services"class="nav-link">Services</a>
+              <a href="#portfolio"class="nav-link">Portfolio</a>
+              <a href="#contact"class="nav-link">Contact</a>
+              <a href="blog/blog.html"class="nav-link">Blog</a>
             </div>
             <div id="nav-bg-pattern"></div>
+            <div id="nav-bg-image"></div>
             <div class="button-box">
               <img id="theme" src="img/icons/white-balance-sunny.png">
             </div>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            <!--<i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-           </div> 
+            --> 
+          </div>
         </nav>
+      </div>
       </header>
       </section>
-      <!--------------------- About ---------------------->  
-      
+      <!-------------------------------------------------------- About ----------------------------------------->  
       <section class="slides"id="about">
         <div class="container">
           <div class="row">
@@ -144,7 +146,7 @@
           </div>  
         </div>
       </section>
-      <!---------------------- Services ------------------------->
+      <!------------------------------------------------------------ Services ------------------------------------------------------------------>
       <section class="slides "id="services" >
         <div class="container">
           <h1 class="subtitle">Services</h1>
@@ -172,7 +174,7 @@
           </div>
         </div>
       </section>
-      <!--------------------------------------------------- Portfolio ------------------------------------------------------------>
+      <!----------------------------------------------------------------- Portfolio ------------------------------------------------------------>
       <section class="slides"id="portfolio">
         <div class="container">
           <h1 class="subtitle">Portfolio</h1>
@@ -225,8 +227,7 @@
           <a href="#" class="btn">View More</a>
         </div>
       </section>
-
-      <!----------------------------------------- Contact section --------------------------------------------------->
+      <!-------------------------------------------------------------------------- Contact section --------------------------------------------------->
       <section class="slides" id="contact">
         <div class="container">
           <div class="row">
@@ -256,51 +257,30 @@
         
       </section>
       </div>
-      <!------------------- About ------------------------>
-      <script>
-      var tablinks= document.getElementsByClassName("tab-links");
-      var tabcontents= document.getElementsByClassName("tab-contents");
-      function opentab(tabname){
-        for(tablink of tablinks){
-          tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-      </script>
-        
     </main>
   <footer>
     <span>
         <a href="https://github.com/Mahdi-abd-rahmen-Madi" target="_blank">
-          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png"  alt="Mahdi's GitHub">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png"  alt="GitHub">
         </a>
     </span>
     <span >
         <a href="https://api.whatsapp.com/send?phone=21658050205" target="_blank">
-          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384007.png" alt="Mahdi's whatsapp"></a>
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384007.png" alt="whatsapp"></a>
     </span>
     <span>
         <a href="https://www.linkedin.com/in/mahdi-madi-a835a0188/" target="_blank">
-          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="Mahdi's linkedin" >
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="linkedin" >
         </a>
     </span>
     <span>
         <a href="mailto:mahdiabderrahmen@duck.com"target="_blank">
-          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png" alt="Mahdi's email">
-        </a>
-    </span>
-    <span>
-        <a href="https://www.facebook.com/mahdi.abdrahmen.madi/" target="_blank">
-          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/20/20673.png" alt="Mahdi's facebook">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png" alt="email">
         </a>
     </span>
     <span>
         <a href="https://www.instagram.com/mahdi_abd_rahmen/" target="_blank">
-          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="Mahdi's instagram">
+          <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="instagram">
         </a>
     </span>
   </footer>  

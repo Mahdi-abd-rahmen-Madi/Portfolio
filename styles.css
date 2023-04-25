@@ -5,8 +5,10 @@
   --tertiary-color:#ff004f;
   --fourth-color:#ababab;
   --dark-color: #252525;
+  --background-color: #252525;
   --title-color: #FFE898;
   --subtitle-color:#F7ECDE;
+  --highlight-color:#a3f1a4;
   --visited-color:#8A2EFF;
   --hover-color:rgba(233,40,201,0.8);
   --progress-color:#1b9bff;
@@ -21,8 +23,13 @@
   --tertiary-color: ;
   --title-color:#FFD166;
   --subtitle-color:#F7ECDE;
-  --visited-color:#B85EFF;
-  --hover-color: rgb(233, 40, 201);
+  --visited-color:#a3f1a4;
+  --visited-color1:#B85EFF;
+  --visited-color2:#8a2eff;
+  --visited-color3: rgba(138,46,255,0.2);
+  --hover-color: #a3f1a4;
+  --hover-color1: rgb(233, 40, 201);
+
 }
 
 /* ========= basic ========= */
@@ -52,8 +59,7 @@ main {
   box-sizing: border-box;
   flex-direction:column;
   background:  var(--primary-color);
-  background-size: cover;
-  background-repeat:repeat;
+  
 }
 /* ========= End basic ========= */
 
@@ -78,11 +84,11 @@ main {
   transform-style: preserve-3d;
 }
 .spinner > div {
-  background-color: rgba(138,46,255,0.2);
+  background-color: var(--background-color);
   height: 100%;
   position: absolute;
   width: 100%;
-  border: 3.5px solid #8a2eff;
+  border: 3.5px solid var(--highlight-color);
 }
 .spinner div:nth-of-type(1) {
   transform: translateZ(-35.2px) rotateY(180deg);
@@ -119,13 +125,12 @@ main {
      transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
   }
 }
-
 /* =========================== End pre loader       ============================================================== */
 
 /* =========================== Slides               ============================================================== */
 
 .section-wrapper {
-  width:100%;
+  width:100vw;
   height:100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -138,9 +143,14 @@ main {
   gap: 50px;
   scroll-snap-align:start;
   transition: all 1s;
- 
+  padding : 8%;
+  /**
+  background-image: url("/img/casey-horner-20VGfqwDeEQ-unsplash.jpg");
+  background-position: center 60%;
+  **/
 }
 
+/*.container {padding:10px;}
 /* =========================== End Slides =========================================================== */
 
 
@@ -196,11 +206,9 @@ p {
   opacity: 1;
   transition: all 0.5s ease-in-out;
 }
-/* ========== End Text Styles ========== */ 
-
-
 
 /* ========== Scroll Tracker ========== */
+/*
 .scroll-tracker {
   height:0.20rem;
   position:fixed;
@@ -208,15 +216,14 @@ p {
   background-color:var(--progress-color);
   transform-origin: left;
 }
-/* ========== End Scroll Tracker ========== */
 
+/* ========== landing page ================= */
 #header {
   width:100%;
   height:100vh; 
   background-size: cover;
   background-position: center;
 }
-
 #navbar  {
   display:flex;
   align-items: center;
@@ -239,56 +246,107 @@ p {
   align-items: center;
   justify-content: center;
   overflow:hidden;
+  z-index: 100;
 }
-
-
-#sidemenu {
+#menu {
   height : 100vh;
+  width: 100vw;
   display: flex ; 
   align-items :center;
   list-style: none;
 }
-
 #nav-links {
   margin-right: clamp(4rem, 10vw, 10rem);
   position: relative;
   z-index:2;
+  padding: auto  10%;
 }
-
-
 .nav-link { 
   position:relative;
-  color : white;
+  color : var(--subtitle-color);
   font-size: clamp(1.6rem, 2.5vw, 6rem);
   font-family: 'baskerville';
   display : block; 
   text-decoration: none;
-  padding: clamp(0.25rem, 0.65vw , 1rem) 0rem;
-  margin-bottom: 1.5rem;
-  font-family: 'Ibarra Real Nova' serif;
+  padding: clamp(0.25rem, 0.65vw , 1rem) 1rem;
+  margin-bottom: 1.6rem;
+  font-weight: 700;
 }
-
 #nav-links:hover > .nav-link {
   opacity : 0.3 ;
 }
 #nav-links:hover > .nav-link:hover {
   opacity:1;
 }
+/**
+#menu[data-active-index="0"] > #nav-bg-pattern {
+  background-position: 0% -25%;
+}
 
+#menu[data-active-index="1"] > #nav-bg-pattern {
+  background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #nav-bg-pattern {
+  background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #nav-bg-pattern {
+  background-position: 0% -100%;
+}
+**/
+/**
+#menu[data-active-index="0"] > #nav-bg-image {
+  background-position: center 45%;
+}
+
+#menu[data-active-index="1"] > #nav-bg-image {
+  background-position: center 50%;
+}
+
+#menu[data-active-index="2"] > #nav-bg-image {
+  background-position: center 55%;
+}
+
+#menu[data-active-index="3"] > #nav-bg-image {
+  background-position: center 60%;
+}
+
+**/
+/**
 #nav-bg-pattern {
+  height:100vh;
+  width: 100vw;
   background-image: radial-gradient(rgba(255,255,255, 0.1) 9%, transparent 9%);
   background-position: 0% 0%;
   background-size: 12vmin 12vmin;
-  position: absolute;
+  position:absolute;
   left : 0px;
   top : 0px;
-  z-index: 1;
+  z-index: 10;
   transition: opacity 0.8s ease, background-size 0.8s ease;
 }
 
 #nav-links:hover ~ #nav-bg-pattern {
-  background-size: 11vmin 11vmin;
+  background-size: 9vmin 9vmin;
   opacity : 0.5;
+}
+
+
+#nav-bg-image {
+  background-image: url("/img/casey-horner-20VGfqwDeEQ-unsplash.jpg");
+  background-position: center 60%;
+  background-size: 100vmax;
+  height: 100%;
+  left: 0px;  
+  opacity: 0.25;
+  position:absolute;
+  top: 0px;
+  transition: opacity 800ms ease,
+    background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100%;
+  z-index: 0;
 }
 
 
@@ -305,10 +363,11 @@ nav ul li {
   position: relative;
   color :var(--subtitle-color);
   text-decoration : none; 
-  font-size:1.1rem;
+  font-size:2.1rem;
   font-weight: 700;
 }
 
+/**
 .nav-link::after {
   content: "";
   width:0;
@@ -323,11 +382,9 @@ nav ul li {
   transition:0.5s;
 }
 
-**/
 
-.container {
-  padding :10px 10%;
-}
+
+/
 
 .nav-scrolled {
   opacity:0.7;
@@ -348,13 +405,13 @@ nav ul li {
   align-items: center;
   justify-content: center;
   overflow:hidden;
+  z-index: 100;
+  cursor: pointer;
 }
-
 #theme {
   width:clamp(19px,2vw,24px);
   height:clamp(19px,2vw,24px);
 }
-
 /* ===================================  End navigation bar        ============================================== */
 
 /* ===================================  Default Section Styling   ============================================== */
@@ -364,14 +421,11 @@ section {
   padding :150px 0 ;
   overflow: hidden;
   color: var(--secondary-color);
-
 }
 /* ===================================  Custom Section Styling    ============================================= */
 
 /* ===================================  Home Section Styling      ============================================= */
-#home {
-  display:flex;
-}
+
 .header-text {
   display:flex;
   flex-direction: column;
@@ -383,7 +437,7 @@ section {
   font-size: 2.5rem;
   font-weight: 900;
   color:transparent;
-  /*-webkit-text-stroke: 1px var(--dark-color);*/
+  -webkit-text-stroke: 1px var(--dark-color);
   background-image: linear-gradient(var(--secondary-color), var(--secondary-color));
   background-repeat: no-repeat;
   -webkit-background-clip: text;
@@ -391,7 +445,6 @@ section {
   background-position: -1050px 0;
   animation: backcolor 5s linear infinite alternate;
 }
-
 @keyframes backcolor{
   100%  {background-position: 0 0;}
   0% {background-position:-1050px 0;}
@@ -680,6 +733,7 @@ form .btn2 {
   border-radius:100%;
   background-color:var(--secondary-color);
   transition: background 1s,transform 1s;
+  z-index: 100;
 }
 .icon:hover{
   background-color:var(--visited-color);

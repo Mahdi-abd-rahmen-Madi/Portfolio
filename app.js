@@ -45,6 +45,19 @@ theme.onclick = function() {
 
 }
 
+
+// ============================== Nav bg pattern ============================== // 
+///
+
+const menu = document.getElementById("emenu");
+
+Array.from(document.getElementsByClassName("nav-link"))
+  .forEach((item, index) => {
+    item.onmouseover = () => {
+      menu.dataset.activeIndex = index;
+    }
+  });
+
 // Nav scrolled class
 /*
 const header = document.querySelector('header');
@@ -72,14 +85,6 @@ const sectionOneObserver = new IntersectionObserver
 sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
-
-
-// ======================== Dark mode switch button ========================
-
-/*let sun =document.getElementById("sun");
-    sun.onclick = function(){
-      sun.classList.toggle("moon");
-    }
 
 
 // ======================== Responsive Side Menu on mobile devices ========================
