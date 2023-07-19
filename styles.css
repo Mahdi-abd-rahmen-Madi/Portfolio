@@ -144,11 +144,12 @@ main {
   scroll-snap-align:start;
   transition: all 1s;
   padding : 8%;
-  /**
+  /*
   background-image: url("/img/casey-horner-20VGfqwDeEQ-unsplash.jpg");
   background-position: center 60%;
-  **/
+  */
 }
+
 
 /*.container {padding:10px;}
 /* =========================== End Slides =========================================================== */

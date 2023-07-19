@@ -49,7 +49,7 @@ theme.onclick = function() {
 // ============================== Nav bg pattern ============================== // 
 ///
 
-const menu = document.getElementById("emenu");
+const menu = document.getElementById("menu");
 
 Array.from(document.getElementsByClassName("nav-link"))
   .forEach((item, index) => {

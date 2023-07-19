@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>Blog</title>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMLVBPBEGQ"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+  
+        gtag('config', 'G-MMLVBPBEGQ');
+      </script>
+      <script src="blog.js"></script>
+      <!-- fontawsesome kit-->
+      <script src="https://kit.fontawesome.com/97a93053e0.js" crossorigin="anonymous"></script>
+      </script>
+</head>
+
+
+
+<body>
+  <nav data-toggled="false" data-transitionable="false">
+    <div id="nav-logo-section" class="nav-section">
+      <a href="#">
+        <i class="fa-solid fa-dumpster-fire"></i>
+        <h4>FINANCY</h4>
+      </a>
+
+    </div>
+    <div id="nav-mobile-section">
+      <div id="nav-link-section" class="nav-section">
+        <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#about">ABOUT</a>
+        <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#portfolio">WORK</a>
+        <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#services">SERVICES</a>
+      </div>
+      <div id="nav-social-section" class="nav-section">
+        <a href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#tiktok" target="_blank">
+          <i class="fa-brands fa-tiktok fa-beat"></i>
+        </a>    
+        <a href="#">
+          <i class="fa-brands fa-codepen"></i>
+        </a>
+      </div>
+      <div id="nav-contact-section" class="nav-section">
+        <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#contact">GET IN TOUCH</a>
+      </div>
+    </div>
+    <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
+      <span>Menu</span>
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
+  
+  <main>
+    <article data-index="0" data-status="active">
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>
+          Educating and empowering individuals to make informed investment decisions.  
+          <br>
+          <br>
+          <p>Click the right arrow to <a class="source-link" href="https://mahdi-abd-rahmen-madi.github.io/portfolio/" target="_blank"> learn more</a></p>
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+        <h2>Prologue</h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+    <article data-index="1" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>Inflation and investing in cryptocurrency can impact your financial future. 
+          <br>Inflation erodes the value of money,
+          <br>while cryptocurrency investing can be risky.
+          <br>This article discusses strategies for navigating the complex world of inflation and cryptocurrency investing and protecting your financial future.
+          <a class="source-link" href="articles/article1.html">Read the full article</a>
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+          <h2>Chapter 1 : Inflation and investing</h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+    <article data-index="2" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>As we become increasingly reliant on digital technologies, it is more
+          important than ever to ensure the security of our digital assets. 
+          <br>From personal information and financial accounts to valuable assets like
+          cryptocurrency, there are many things that we need to protect online. In
+          this episode of “FINANCY”, we will discuss the steps you can take to
+          secure your digital assets and protect against cyberattacks. <br>
+          <a class="source-link" href="articles/article2.html">Read the full article</a>
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+        <h2>Chapter 2 :</h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+    <article data-index="3" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>When storing and managing cryptocurrency, you can choose between a
+          custodial or non-custodial wallet.
+          <br>Custodial wallets are managed by a third party and offer ease of access, while non-custodial wallets offer
+          greater control and security.
+          <br>During the 3rd episode of “FINANCY” we will compare these two wallet
+          types and help you decide which is best for you.<br>
+          <a class="source-link" href="articles/article3.html">Read the full article</a>
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+        <h2>Chapter 3 :</h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+
+    <article data-index="4" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>
+          The blobiest of blobs nestled deep in the heart of outer space. Well, technically the universe is both infinite and homogeneous so there isn't really a heart, per se.
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+        <h2>Chapter 4 :</h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+    <article data-index="5" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>
+          The blobiest of blobs nestled deep in the heart of outer space. Well, technically the universe is both infinite and homogeneous so there isn't really a heart, per se.
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+        <h2>Chapter 5 :</h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+
+    <article data-index="6" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>
+          The blobiest of blobs nestled deep in the heart of outer space. Well, technically the universe is both infinite and homogeneous so there isn't really a heart, per se.
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+        <h2>Chapter 6 :</h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+    <article data-index="7" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>
+          The blobiest of blobs nestled deep in the heart of outer space. Well, technically the universe is both infinite and homogeneous so there isn't really a heart, per se.
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+        <h2>Chapter 7 : </h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+    <article data-index="8" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>
+          The blobiest of blobs nestled deep in the heart of outer space. Well, technically the universe is both infinite and homogeneous so there isn't really a heart, per se.
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+        <h2>Chapter 8 : </h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+    <article data-index="9" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>
+          The blobiest of blobs nestled deep in the heart of outer space. Well, technically the universe is both infinite and homogeneous so there isn't really a heart, per se.
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+        <h2>Chapter 9 :</h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+    <article data-index="10" data-status="inactive">    
+      <div class="article-image-section article-section"></div>
+      <div class="article-description-section article-section">
+        <p>
+          The blobiest of blobs nestled deep in the heart of outer space. Well, technically the universe is both infinite and homogeneous so there isn't really a heart, per se.
+        </p>
+      </div>
+      <div class="article-title-section article-section">
+        <h2>Epilogue</h2>
+        <i class="fa-light fa-plus-large"></i>
+      </div>
+      <div class="article-nav-section article-section">
+        <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+          <i class="fa-light fa-arrow-left-long"></i>
+        </button>
+        <button class="article-nav-button" type="button" onclick="handleRightClick()">
+          <i class="fa-light fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+  </main>
+
+
+
+
+  <!--
+
+    <iframe src="Financy_Ep1.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+    <iframe src="Financy_Ep2.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+    <iframe src="Financy_Ep3.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+  --> 
+</body>
+</html>
