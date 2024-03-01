@@ -260,7 +260,7 @@ p {
   margin-right: clamp(4rem, 10vw, 10rem);
   position: relative;
   z-index:2;
-  padding: auto  10%;
+  padding: auto 10%;
 }
 .nav-link { 
   position:relative;
@@ -271,7 +271,7 @@ p {
   text-decoration: none;
   padding: clamp(0.25rem, 0.65vw , 1rem) 1rem;
   margin-bottom: 1.6rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 #nav-links:hover > .nav-link {
   opacity : 0.3 ;
