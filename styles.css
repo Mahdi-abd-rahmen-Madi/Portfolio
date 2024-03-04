@@ -69,6 +69,7 @@ main {
 #preloader {
   background:var(--dark-color);
   height:100vh;
+  height:100svh;
   width:100%;
   position:fixed;
   z-index:9999;
@@ -127,23 +128,214 @@ main {
 }
 /* =========================== End pre loader       ============================================================== */
 
+.nav-icon {
+  position: relative;
+  z-index: 1;
+  width: 26px;
+  height: 21px;
+  cursor: pointer;
+  z-index:11;
+}
+
+.nav-icon span {
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: #2a1929;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-icon span {
+  background: #fff;
+ 
+
+}
+
+.nav-icon span:nth-child(odd) {
+  /* 1, 3, 5 */
+  left: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.nav-icon span:nth-child(even) {
+  /* 2, 4, 6 */
+  left: 50%;
+  border-radius: 0 5px 5px 0;
+}
+
+.nav-icon span:nth-child(1),
+.nav-icon span:nth-child(2) {
+  top: 0;
+}
+
+.nav-icon span:nth-child(3),
+.nav-icon span:nth-child(4) {
+  top: 9px;
+}
+
+.nav-icon span:nth-child(5),
+.nav-icon span:nth-child(6) {
+  top: 18px;
+}
+
+.nav-open .nav-icon span:nth-child(1),
+.nav-open .nav-icon span:nth-child(6) {
+  transform: rotate(45deg);
+}
+
+.nav-open .nav-icon span:nth-child(2),
+.nav-open .nav-icon span:nth-child(5) {
+  transform: rotate(-45deg);
+}
+
+.nav-open .nav-icon span:nth-child(1) {
+  top: 5px;
+  left: 2px;
+}
+
+.nav-open .nav-icon span:nth-child(2) {
+  top: 5px;
+  left: calc(50% - 2px);
+}
+
+.nav-open .nav-icon span:nth-child(3) {
+  left: -100%;
+  opacity: 0;
+}
+
+.nav-open .nav-icon span:nth-child(4) {
+  left: 150%;
+  opacity: 0;
+}
+
+.nav-open .nav-icon span:nth-child(5) {
+  top: 14px;
+  left: 2px;
+}
+
+.nav-open .nav-icon span:nth-child(6) {
+  top: 14px;
+  left: calc(50% - 2px);
+}
+
+/* Split Column Slide Down Navigation */
+nav {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  pointer-events: none;
+  user-select: none;
+  z-index:10;
+  transition: 500ms ease-in-out;
+}
+
+nav:has(:nth-child(1):hover) {
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+nav:has(:nth-child(2):hover) {
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+
+nav:has(:nth-child(3):hover) {
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+}
+
+nav:has(:nth-child(4):hover) {
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+}
+
+.nav-item {
+  position: relative;
+  height: 100vh;
+  padding: 10px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-size: cover;
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100vh);
+  transition: transform 0.65s;
+}
+
+.nav-open .nav-item {
+  transform: translateY(0);
+}
+
+.nav-item::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-item:hover::after {
+  opacity: 0.5;
+}
+
+.nav-item:nth-child(1)::after {
+  background-color: rgba(15, 66, 206, 0.5);
+}
+
+.nav-item:nth-child(2)::after {
+  background-color: rgba(230, 2, 127, 0.5);
+}
+
+.nav-item:nth-child(3)::after {
+  background-color: rgba(223, 1, 216, 0.5);
+}
+
+.nav-item:nth-child(4)::after {
+  background-color: rgba(182, 172, 30, 0.5);
+}
+
+.nav-item:nth-child(1) {
+  background-image: url("https://source.unsplash.com/a-man-standing-next-to-a-tent-in-the-desert-ckfXPMb2_BI");
+}
+
+.nav-item:nth-child(2) {
+  background-image: url("https://source.unsplash.com/an-aerial-view-of-a-desert-at-sunset-YeLs9lJDx9M");
+  transition-delay: 500ms;
+}
+
+.nav-item:nth-child(3) {
+  background-image: url("https://source.unsplash.com/an-aerial-view-of-a-desert-with-rocks-and-sand-4q87Z96NBYg");
+  transition-delay: 300ms;
+}
+
+.nav-item:nth-child(4) {
+  background-image: url("https://source.unsplash.com/an-aerial-view-of-a-desert-with-rocks-and-sand-Iy59i0M7oP4");
+  transition-delay: 700ms;
+}
+
 /* =========================== Slides               ============================================================== */
 
 .section-wrapper {
   width:100vw;
   height:100vh;
+  height:100svh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 .slides {
   width:100%;
   height:100vh;
+  height:100svh;
   align-items: center;
   justify-content: center;
   gap: 50px;
   scroll-snap-align:start;
   transition: all 1s;
-  padding : 8%;
+  padding :30px;
   /*
   background-image: url("/img/casey-horner-20VGfqwDeEQ-unsplash.jpg");
   background-position: center 60%;
@@ -187,7 +379,7 @@ h1 {
 h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
   text-align:center;
-  padding-bottom:5%;
+  padding-bottom:20px;
 }
 p {
   font-size:1rem;
@@ -219,15 +411,17 @@ p {
 }
 
 /* ========== landing page ================= */
+
+/*
 #header {
   width:100%;
-  height:100vh; 
   background-size: cover;
   background-position: center;
 }
 #navbar  {
   display:flex;
-  align-items: center;
+  align-items: left;
+  place-content: center;
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
@@ -250,17 +444,13 @@ p {
   z-index: 100;
 }
 #menu {
-  height : 100vh;
-  width: 100vw;
-  display: flex ; 
-  align-items :center;
   list-style: none;
 }
 #nav-links {
   margin-right: clamp(4rem, 10vw, 10rem);
   position: relative;
   z-index:2;
-  padding: auto 10%;
+  padding: auto;
 }
 .nav-link { 
   position:relative;
@@ -279,121 +469,10 @@ p {
 #nav-links:hover > .nav-link:hover {
   opacity:1;
 }
-/**
-#menu[data-active-index="0"] > #nav-bg-pattern {
-  background-position: 0% -25%;
-}
-
-#menu[data-active-index="1"] > #nav-bg-pattern {
-  background-position: 0% -50%;
-}
-
-#menu[data-active-index="2"] > #nav-bg-pattern {
-  background-position: 0% -75%;
-}
-
-#menu[data-active-index="3"] > #nav-bg-pattern {
-  background-position: 0% -100%;
-}
-**/
-/**
-#menu[data-active-index="0"] > #nav-bg-image {
-  background-position: center 45%;
-}
-
-#menu[data-active-index="1"] > #nav-bg-image {
-  background-position: center 50%;
-}
-
-#menu[data-active-index="2"] > #nav-bg-image {
-  background-position: center 55%;
-}
-
-#menu[data-active-index="3"] > #nav-bg-image {
-  background-position: center 60%;
-}
-
-**/
-/**
-#nav-bg-pattern {
-  height:100vh;
-  width: 100vw;
-  background-image: radial-gradient(rgba(255,255,255, 0.1) 9%, transparent 9%);
-  background-position: 0% 0%;
-  background-size: 12vmin 12vmin;
-  position:absolute;
-  left : 0px;
-  top : 0px;
-  z-index: 10;
-  transition: opacity 0.8s ease, background-size 0.8s ease;
-}
-
-#nav-links:hover ~ #nav-bg-pattern {
-  background-size: 9vmin 9vmin;
-  opacity : 0.5;
-}
-
-
-#nav-bg-image {
-  background-image: url("/img/casey-horner-20VGfqwDeEQ-unsplash.jpg");
-  background-position: center 60%;
-  background-size: 100vmax;
-  height: 100%;
-  left: 0px;  
-  opacity: 0.25;
-  position:absolute;
-  top: 0px;
-  transition: opacity 800ms ease,
-    background-size 800ms ease,
-    background-position 800ms ease;
-  width: 100%;
-  z-index: 0;
-}
-
-
-/**
-nav ul li {
-  display:inline-block;
-  margin:10px 20px;
-  list-style: none;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-}
-.nav-link {
-  position: relative;
-  color :var(--subtitle-color);
-  text-decoration : none; 
-  font-size:2.1rem;
-  font-weight: 700;
-}
-
-/**
-.nav-link::after {
-  content: "";
-  width:0;
-  height: 2px;
-  background:var(--subtitle-color);
-  position: absolute;
-  left:0;
-  bottom:-5px;
-}
-.nav-link:hover::after {
-  width:90%;
-  transition:0.5s;
-}
 
 
 
-/
-
-.nav-scrolled {
-  opacity:0.7;
-  z-index:1;
-}
-
-
-/* ========== Dark/light mode switch button ========== */
+/* ========== Dark/light mode switch button ========== 
 .button-box {
   width:clamp(25px,2vw,40px);
   height:clamp(25px,2vw,40px);
@@ -419,7 +498,8 @@ nav ul li {
 section {
   place-items:center;
   min-height:100vh;
-  padding :150px 0 ;
+  min-height:100svh;
+  padding :50px 0 ;
   overflow: hidden;
   color: var(--secondary-color);
 }
@@ -435,7 +515,7 @@ section {
   padding: 5px 0px;
 }
 .header-text h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 2rem, 2.5rem);
   font-weight: 900;
   color:transparent;
   -webkit-text-stroke: 1px var(--dark-color);
@@ -770,13 +850,15 @@ footer{
   
 section {
   place-items:center;
-  min-height:100vh;
+  min-height: 100vh;
+  min-height:100svh;
   padding:20px 5px;
   overflow:hidden ;
 }
   
 .work img {
-  height:15vh;
+  height: 15vh;
+  height:15svh;
   aspect-ratio: 16/9;
 }
  
