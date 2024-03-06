@@ -32,18 +32,6 @@ scrollTracker.animate(
     }
 );
 */
-// ======================== Dark mode ========================
-
-var icon = document.getElementById("theme");
-theme.onclick = function() {
-  document.body.classList.toggle("dark-theme");
-  if(document.body.classList.contains("dark-theme")){ 
-    theme.src ="img/icons/weather-night.png"
-  }else{
-    theme.src ="img/icons/white-balance-sunny.png"
-  }
-
-}
 
 
 // ============================== Nav bg pattern ============================== // 

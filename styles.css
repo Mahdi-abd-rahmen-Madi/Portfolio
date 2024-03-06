@@ -147,7 +147,6 @@ main {
 
 .nav-icon span {
   background: #fff;
- 
 
 }
 
@@ -223,7 +222,6 @@ nav {
   position: fixed;
   inset: 0;
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   pointer-events: none;
   user-select: none;
@@ -335,7 +333,7 @@ nav:has(:nth-child(4):hover) {
   gap: 50px;
   scroll-snap-align:start;
   transition: all 1s;
-  padding :30px;
+  padding :3%;
   /*
   background-image: url("/img/casey-horner-20VGfqwDeEQ-unsplash.jpg");
   background-position: center 60%;
@@ -347,30 +345,7 @@ nav:has(:nth-child(4):hover) {
 /* =========================== End Slides =========================================================== */
 
 
-/* ========= Show elements on scroll  ================================================================*/
-/**
-.hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translatex(-100%);
-  transition: all 1s;
-}
-.show {opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
-}
 
-/*==========================================*/
-
-
-/* ========== Text Styles ========== */
-
-/*@font-face {
-  font-family: 'Baskervville';
-  src:local('Baskervville'), url(fonts/baskerville-font) format('ttf');
-  font-display: swap;
-  -webkit-font-smoothing: antialiased;
-}*/
 
 h1 {
   font-family: 'Anton', sans-serif;
@@ -400,99 +375,6 @@ p {
   transition: all 0.5s ease-in-out;
 }
 
-/* ========== Scroll Tracker ========== */
-/*
-.scroll-tracker {
-  height:0.20rem;
-  position:fixed;
-  inset:0 0 auto;
-  background-color:var(--progress-color);
-  transform-origin: left;
-}
-
-/* ========== landing page ================= */
-
-/*
-#header {
-  width:100%;
-  background-size: cover;
-  background-position: center;
-}
-#navbar  {
-  display:flex;
-  align-items: left;
-  place-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-#navbar .fa-solid{
-  display:none;
-}
-
-.logo {
-  width: clamp(25px,2vw,40px);
-  height:clamp(25px,2vw,40px);
-  border-radius: 50%;
-  position: absolute;
-  left:clamp(10px,2vw,20px);
-  top:10px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  overflow:hidden;
-  z-index: 100;
-}
-#menu {
-  list-style: none;
-}
-#nav-links {
-  margin-right: clamp(4rem, 10vw, 10rem);
-  position: relative;
-  z-index:2;
-  padding: auto;
-}
-.nav-link { 
-  position:relative;
-  color : var(--subtitle-color);
-  font-size: clamp(1.6rem, 2.5vw, 6rem);
-  font-family: 'baskerville';
-  display : block; 
-  text-decoration: none;
-  padding: clamp(0.25rem, 0.65vw , 1rem) 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: 900;
-}
-#nav-links:hover > .nav-link {
-  opacity : 0.3 ;
-}
-#nav-links:hover > .nav-link:hover {
-  opacity:1;
-}
-
-
-
-/* ========== Dark/light mode switch button ========== 
-.button-box {
-  width:clamp(25px,2vw,40px);
-  height:clamp(25px,2vw,40px);
-  background :var(--secondary-color);
-  border-radius:50%;
-  position: absolute;
-  right:clamp(15px,2vw,30px);
-  top:10px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  overflow:hidden;
-  z-index: 100;
-  cursor: pointer;
-}
-#theme {
-  width:clamp(19px,2vw,24px);
-  height:clamp(19px,2vw,24px);
-}
-/* ===================================  End navigation bar        ============================================== */
 
 /* ===================================  Default Section Styling   ============================================== */
 section {
@@ -544,11 +426,38 @@ section {
   flex-basis:35%;
 }
 .about-col-1 img {
-  width:100%;
-  border-radius: 15px;
+  width:300px;
+  height: auto; 
+  display: block; 
+  border-radius: 15px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
+
+.about-col-1 img:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Media Queries for Tablets */
+@media (max-width: 768px) {
+  .about-col-1 img {
+      max-width: 220px; /* Adjust width for tablets */
+      margin: 0 auto; /* Center the image */
+  }
+}
+
+/* Media Queries for Phones */
+@media (max-width: 480px) {
+  .about-col-1 img{
+      max-width: 150px; /* Adjust width for phones */
+  }
+}
+
+
+
+
 .about-col-2 {
-  flex-basis:60%;
+  flex-basis:65%;
 }
 .subtitle {
   font-size:2rem;
