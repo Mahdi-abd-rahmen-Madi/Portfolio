@@ -34,50 +34,13 @@ scrollTracker.animate(
 */
 
 
-// ============================== Nav bg pattern ============================== // 
-///
 
-const menu = document.getElementById("menu");
-
-Array.from(document.getElementsByClassName("nav-link"))
-  .forEach((item, index) => {
-    item.onmouseover = () => {
-      menu.dataset.activeIndex = index;
-    }
-  });
-
-// Nav scrolled class
-/*
-const header = document.querySelector('header');
-const sectionOne = document.querySelector('#about');
-
-const sectionOneOptions = {
-    rootMargin: "-200px 0px 0px 0px"
-};
-
-const sectionOneObserver = new IntersectionObserver
-(function(
-    entries,
-    sectionOneObserver
-) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            header.classList.add('nav-scrolled');
-            header.classList.remove('active');
-        } else {
-            header.classList.remove('nav-scrolled');
-        }
-    
-    });
-},
-sectionOneOptions);
-
-sectionOneObserver.observe(sectionOne);
 
 
 // ======================== Responsive Side Menu on mobile devices ========================
 
-var sidemenu = document.getElementById("sidemenu");
+
+/*var sidemenu = document.getElementById("sidemenu");
 
 function openmenu(){
     sidemenu.style.right = "0";

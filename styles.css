@@ -126,11 +126,10 @@ main {
      transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
   }
 }
-/* =========================== End pre loader       ============================================================== */
+/* =========================== nav      ============================================================== */
 
 .nav-icon {
   position: relative;
-  z-index: 1;
   width: 26px;
   height: 21px;
   cursor: pointer;
@@ -147,7 +146,6 @@ main {
 
 .nav-icon span {
   background: #fff;
-
 }
 
 .nav-icon span:nth-child(odd) {
@@ -229,6 +227,16 @@ nav {
   transition: 500ms ease-in-out;
 }
 
+@media (max-width: 768px) {
+  nav {
+    display:flex;
+    flex-direction: column;
+  }
+}
+*/
+
+
+
 nav:has(:nth-child(1):hover) {
   grid-template-columns: 2fr 1fr 1fr 1fr;
 }
@@ -255,7 +263,8 @@ nav:has(:nth-child(4):hover) {
   text-decoration: none;
   color: #fff;
   background-size: cover;
-  pointer-events: auto;
+  
+  /*pointer-events: auto;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,7 +350,6 @@ nav:has(:nth-child(4):hover) {
 }
 
 
-/*.container {padding:10px;}
 /* =========================== End Slides =========================================================== */
 
 
@@ -385,7 +393,6 @@ section {
   overflow: hidden;
   color: var(--secondary-color);
 }
-/* ===================================  Custom Section Styling    ============================================= */
 
 /* ===================================  Home Section Styling      ============================================= */
 
